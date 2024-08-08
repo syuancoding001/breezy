@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTCX翻译剧套餐计算器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TTCX翻译剧套餐计算器</h1>
+        <div class="input-group">
+            <label for="package">选择翻译剧套餐类型：</label>
+            <select id="package">
+                <option value="L1">L1 Package（AI翻译+字幕）</option>
+                <option value="L2">L2 Package（AI翻译+AI配音+字幕）</option>
+                <option value="L3">L3 Package（AI/真人翻译+真人配音+字幕）</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="minutes">短剧总时长（分钟）：</label>
+            <input type="number" id="minutes" min="40" max="300" placeholder="请填写一部剧的精确总时长，范围限制在40～300分钟之间">
+        </div>
+        <div class="input-group">
+            <label for="small-language">目标语言是否为以下小语种之一：日语、韩语、阿语、土耳其语、法语、德语</label>
+            <select id="small-language">
+                <option value="yes">是</option>
+                <option value="no">否</option>
+            </select>
+        </div>
+        <button onclick="calculate()">计算</button>
+        <div class="result-group">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+        </div>
+        <p class="disclaimer">如有疑问，请咨询TTCX工作人员</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
